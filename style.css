@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+
+
+:root {
+
+	--Pale-blue: hsl(225, 100%, 94%);
+	--Bright-blue: hsl(245, 75%, 52%);
+
+	--Very-pale-blue: hsl(225, 100%, 98%);
+	--Desaturated-blue: hsl(224, 23%, 55%);
+	--Dark-blue: hsl(223, 47%, 23%);
+	--Font-size: 16px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Red Hat Display', sans-serif;
+	box-sizing: border-box;
+}
+body{
+
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-image: url(images/pattern-background-desktop.svg);
+	background-repeat: no-repeat;
+	background-color: var(--Very-pale-blue);
+	margin: auto 1.25rem;
+
+
+}
+
+.container
+{
+	max-width: 375px;
+	height: auto;
+	background-color:var(--Very-pale-blue);
+	border-radius: 1.25rem;
+	box-shadow: 0 10px 20px 5px  hsla(228, 45%, 44%,0.4);
+}
+.container .imgbx
+{
+
+	width: 100%;
+	height: auto;
+
+}
+.container .imgbx img
+{
+	width: 100%;
+	height: 100%;
+	border-radius: 1.25rem 1.25rem 0 0;
+
+}
+.container .content
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 1.25rem 1.25rem;
+}
+.content h1{
+	font-weight: 900;
+	color: var(--Dark-blue);
+	font-size: 1.6em;
+}
+.content p
+{
+	margin: .625rem 0;
+	text-align:  center;
+	font-weight: 400;
+	color: var(--Desaturated-blue);
+	line-height: 1.5625rem;
+}
+.content .plan{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 90%;
+	height: auto;
+	background-color: hsla(224, 20%, 50%,0.1);
+	margin: .625rem 0;
+	padding: .625rem .625rem;
+	border-radius: .625rem;
+}
+.plan img
+{
+	filter: drop-shadow(0 0 .125rem  hsl(224, 23%, 55%,0.3));
+}
+ul{
+
+	transform: translate(-20px);
+}
+
+ul li{
+	list-style: none;
+}
+ul li:nth-child(1)
+{
+	font-weight: 700;
+	color: var(--Dark-blue);
+}
+ul li:nth-child(2)
+{
+	color: var(--Desaturated-blue);
+}
+.plan a{
+	font-weight: 600;
+	cursor: pointer;
+
+}
+.payment
+{
+	width: 90%;
+	height: auto;
+	background-color: var(--Bright-blue);
+	margin: .625rem auto;
+	border-radius: .625rem;
+	box-shadow: 0 .625rem .625rem .3125rem  hsla(224, 23%, 55%,0.3);
+
+}
+.payment p
+{
+	color: var(--Pale-blue);
+	cursor: pointer;
+
+}
+.container span{
+	margin: 1.25rem auto;
+	font-weight: 600;
+	color: var(--Desaturated-blue);
+	cursor: pointer;
+
+}
+/*   .....    ....   hover effect ......  ......*/
+.container span:hover{
+	color: var(--Dark-blue);
+}
+.plan a:hover{
+
+	text-decoration: none;
+	color: hsla(245, 75%, 52%,0.7);
+}
+.payment:hover{
+	background-color: hsla(245, 75%, 52%,0.7);
+}
+/*   .....    ....   media querries effect ......  ......*/
+
+@media screen and (max-width:380px) {
+	body{
+		background-image: url(images/pattern-background-mobile.svg);
+		background-repeat: no-repeat;
+		background-color: var(--Very-pale-blue);
+		margin: auto 1.25rem;
+
+
+
+	}
+}
+@media  screen and   (max-width:16.125rem) {
+	body{
+		margin: auto 1.25rem;
+
+	}
+	h1{
+		font-size: 15px;
+		text-align: center;
+	}
+	.content p{
+		font-size: .8125rem;
+		text-align: center;
+
+	}
+	.content .plan{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: .625rem;
+	}
+	.plan ul li{
+		transform: translate(20px);
+	}
+
+}
